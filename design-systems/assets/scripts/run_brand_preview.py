@@ -6,7 +6,7 @@ run_brand_preview.py — 启动品牌设计风格浏览器预览。
   1. 调用 brand-catalog.py 生成 JSON 目录
   2. 将 JSON 写入临时文件
   3. 读取模板，替换占位符
-  4. 调用 Citycraft 的 run_preview.py 启动 HTTP bridge
+  4. 启动浏览器预览
 
 用法：
   python3 run_brand_preview.py --template TEMPLATE --output OUTPUT [--port PORT] [--timeout SEC] "LANG=zh" "BRANDS_JSON=auto"
@@ -21,7 +21,6 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 DESIGN_SYSTEMS_DIR = SCRIPT_DIR.parent.parent  # ~/.claude/skills/design-systems
-CITYCRAFT_SCRIPTS = Path.home() / ".claude" / "skills" / "citycraft" / "assets" / "scripts"
 
 
 def main():
@@ -66,26 +65,11 @@ def main():
 
     Path(args.output).write_text(template_text, encoding="utf-8")
 
-    # 4. 调用 Citycraft 的 run_preview.py
-    run_preview = CITYCRAFT_SCRIPTS / "run_preview.py"
-    if not run_preview.exists():
-        # 没找到 Citycraft run_preview.py，降级为直接打开文件
-        import webbrowser
-        webbrowser.open(f"file://{Path(args.output).resolve()}")
-        print("⚠ Citycraft run_preview.py 未找到，以本地文件方式打开")
-        print("选择品牌后请复制 JSON 结果粘贴给 Agent")
-        return
-
-    preview_args = [
-        sys.executable, str(run_preview),
-        "--template", args.output,
-        "--output", args.output,
-        "--port", str(args.port),
-        "--timeout", str(args.timeout),
-        f"RECEIVER_PORT={receiver_port}",
-    ]
-
-    subprocess.run(preview_args)
+    # 4. 打开浏览器预览
+    import webbrowser
+    webbrowser.open(f"file://{Path(args.output).resolve()}")
+    print("✓ 品牌预览已在浏览器中打开")
+    print("选择品牌后请复制 JSON 结果粘贴给 Agent")
 
 
 if __name__ == "__main__":

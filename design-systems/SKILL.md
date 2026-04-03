@@ -354,16 +354,3 @@ letter-spacing: normal;
 font-weight: 300;
 ```
 
----
-
-## Citycraft Integration
-
-Citycraft 落地页工作流可直接使用 design-systems 的品牌 token。运行：
-
-```bash
-python3 ~/.claude/skills/citycraft/assets/scripts/get_brand_tokens.py <brand-name>
-```
-
-输出 Citycraft 兼容的 5 个颜色 token（`CITY_BG`, `CITY_SURFACE`, `CITY_INK`, `CITY_MUTED`, `CITY_ACCENT`），与城市风格的输出格式完全一致。支持 `--dark` 提取暗色模式 token，`--list` 列出所有可用品牌。
-
-当用户说"用 Vercel/Stripe/Apple 风格做个落地页"时，Citycraft 会自动检测品牌名、提取 token、跳过城市选择直接进入布局选项。详见 `~/.claude/skills/citycraft/SKILL.md` Step 1.5。
