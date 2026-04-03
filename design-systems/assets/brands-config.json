@@ -1,0 +1,404 @@
+{
+  "_meta": {
+    "version": 1,
+    "last_synced": null,
+    "upstream_repo": "VoltAgent/awesome-design-md",
+    "upstream_branch": "main",
+    "total_brands": 54
+  },
+  "category_mapping": {
+    "AI & Machine Learning": "AI & ML",
+    "Developer Tools & Platforms": "Developer",
+    "Infrastructure & Cloud": "Infra",
+    "Design & Productivity": "Design",
+    "Fintech & Crypto": "Fintech",
+    "Enterprise & Consumer": "Enterprise"
+  },
+  "brands": {
+    "airbnb": {
+      "category": "Enterprise",
+      "style": "珊瑚色暖调、摄影驱动、圆润 UI",
+      "aliases": [
+        "airbnb"
+      ]
+    },
+    "airtable": {
+      "category": "Design",
+      "style": "多彩友好、结构化数据",
+      "aliases": [
+        "airtable"
+      ]
+    },
+    "apple": {
+      "category": "Enterprise",
+      "style": "产品级摄影、SF Pro、黑白交替段落",
+      "aliases": [
+        "apple"
+      ]
+    },
+    "bmw": {
+      "category": "Enterprise",
+      "style": "深色高级表面、德国工程美学",
+      "aliases": [
+        "bmw"
+      ]
+    },
+    "cal": {
+      "category": "Design",
+      "style": "中性简洁、开发者导向",
+      "aliases": [
+        "cal",
+        "cal.com"
+      ]
+    },
+    "claude": {
+      "category": "AI & ML",
+      "style": "暖陶土点缀、干净编辑布局",
+      "aliases": [
+        "claude",
+        "anthropic"
+      ]
+    },
+    "clay": {
+      "category": "Design",
+      "style": "有机形状、柔和渐变",
+      "aliases": [
+        "clay"
+      ]
+    },
+    "clickhouse": {
+      "category": "Infra",
+      "style": "黄色点缀、技术文档风格",
+      "aliases": [
+        "clickhouse"
+      ]
+    },
+    "cohere": {
+      "category": "AI & ML",
+      "style": "渐变活力、数据丰富仪表板",
+      "aliases": [
+        "cohere"
+      ]
+    },
+    "coinbase": {
+      "category": "Fintech",
+      "style": "蓝色信任、机构级简洁",
+      "aliases": [
+        "coinbase"
+      ]
+    },
+    "composio": {
+      "category": "Infra",
+      "style": "现代深色、多彩集成图标",
+      "aliases": [
+        "composio"
+      ]
+    },
+    "cursor": {
+      "category": "Developer",
+      "style": "深色渐变、AI 编辑器风格",
+      "aliases": [
+        "cursor"
+      ]
+    },
+    "elevenlabs": {
+      "category": "AI & ML",
+      "style": "暗色电影、音频波形美学",
+      "aliases": [
+        "elevenlabs"
+      ]
+    },
+    "expo": {
+      "category": "Developer",
+      "style": "深色主题、紧凑字距、代码导向",
+      "aliases": [
+        "expo"
+      ]
+    },
+    "figma": {
+      "category": "Design",
+      "style": "多彩活力、专业而不失趣味",
+      "aliases": [
+        "figma"
+      ]
+    },
+    "framer": {
+      "category": "Design",
+      "style": "黑蓝大胆、动效优先、设计导向",
+      "aliases": [
+        "framer"
+      ]
+    },
+    "hashicorp": {
+      "category": "Infra",
+      "style": "企业级黑白",
+      "aliases": [
+        "hashicorp"
+      ]
+    },
+    "ibm": {
+      "category": "Enterprise",
+      "style": "Carbon 设计系统、结构化蓝色",
+      "aliases": [
+        "ibm"
+      ]
+    },
+    "intercom": {
+      "category": "Design",
+      "style": "友好蓝色、对话式 UI",
+      "aliases": [
+        "intercom"
+      ]
+    },
+    "kraken": {
+      "category": "Fintech",
+      "style": "紫色暗色 UI、数据密集",
+      "aliases": [
+        "kraken"
+      ]
+    },
+    "linear.app": {
+      "category": "Developer",
+      "style": "暗黑模式、Inter Variable 510、靛蓝点缀",
+      "aliases": [
+        "linear",
+        "linear.app"
+      ]
+    },
+    "lovable": {
+      "category": "Developer",
+      "style": "渐变趣味、友好开发者美学",
+      "aliases": [
+        "lovable"
+      ]
+    },
+    "minimax": {
+      "category": "AI & ML",
+      "style": "大胆深色、霓虹点缀",
+      "aliases": [
+        "minimax"
+      ]
+    },
+    "mintlify": {
+      "category": "Developer",
+      "style": "干净绿色、阅读优化",
+      "aliases": [
+        "mintlify"
+      ]
+    },
+    "miro": {
+      "category": "Design",
+      "style": "黄色活力、无限画布",
+      "aliases": [
+        "miro"
+      ]
+    },
+    "mistral.ai": {
+      "category": "AI & ML",
+      "style": "法式极简、紫色调",
+      "aliases": [
+        "mistral",
+        "mistral.ai"
+      ]
+    },
+    "mongodb": {
+      "category": "Infra",
+      "style": "绿叶品牌、开发者文档",
+      "aliases": [
+        "mongodb"
+      ]
+    },
+    "notion": {
+      "category": "Design",
+      "style": "暖色极简、衬线标题、柔和表面",
+      "aliases": [
+        "notion"
+      ]
+    },
+    "nvidia": {
+      "category": "Enterprise",
+      "style": "绿黑能量、技术力量感",
+      "aliases": [
+        "nvidia"
+      ]
+    },
+    "ollama": {
+      "category": "AI & ML",
+      "style": "终端优先、单色简洁",
+      "aliases": [
+        "ollama"
+      ]
+    },
+    "opencode.ai": {
+      "category": "AI & ML",
+      "style": "开发者深色主题",
+      "aliases": [
+        "opencode",
+        "opencode.ai"
+      ]
+    },
+    "pinterest": {
+      "category": "Design",
+      "style": "红色点缀、瀑布流网格",
+      "aliases": [
+        "pinterest"
+      ]
+    },
+    "posthog": {
+      "category": "Developer",
+      "style": "俏刺猬品牌、开发者友好暗色 UI",
+      "aliases": [
+        "posthog"
+      ]
+    },
+    "raycast": {
+      "category": "Developer",
+      "style": "深色铬合金、渐变点缀",
+      "aliases": [
+        "raycast"
+      ]
+    },
+    "replicate": {
+      "category": "AI & ML",
+      "style": "白色画布、代码导向",
+      "aliases": [
+        "replicate"
+      ]
+    },
+    "resend": {
+      "category": "Developer",
+      "style": "深色极简、等宽点缀",
+      "aliases": [
+        "resend"
+      ]
+    },
+    "revolut": {
+      "category": "Fintech",
+      "style": "深色渐变卡片、金融科技精度",
+      "aliases": [
+        "revolut"
+      ]
+    },
+    "runwayml": {
+      "category": "AI & ML",
+      "style": "暗色电影、媒体丰富",
+      "aliases": [
+        "runwayml"
+      ]
+    },
+    "sanity": {
+      "category": "Infra",
+      "style": "红色点缀、内容优先",
+      "aliases": [
+        "sanity"
+      ]
+    },
+    "sentry": {
+      "category": "Developer",
+      "style": "暗色仪表板、粉紫点缀",
+      "aliases": [
+        "sentry"
+      ]
+    },
+    "spacex": {
+      "category": "Enterprise",
+      "style": "纯黑电影级、全大写航空标注",
+      "aliases": [
+        "spacex"
+      ]
+    },
+    "spotify": {
+      "category": "Enterprise",
+      "style": "暗底亮绿、大胆排版、专辑封面驱动",
+      "aliases": [
+        "spotify"
+      ]
+    },
+    "stripe": {
+      "category": "Payments",
+      "style": "金融科技、紫色主色、蓝色阴影、weight-300 标题",
+      "aliases": [
+        "stripe"
+      ]
+    },
+    "supabase": {
+      "category": "Developer",
+      "style": "暗色翡翠、代码优先",
+      "aliases": [
+        "supabase"
+      ]
+    },
+    "superhuman": {
+      "category": "Developer",
+      "style": "高级暗色 UI、键盘优先、紫色光晕",
+      "aliases": [
+        "superhuman"
+      ]
+    },
+    "together.ai": {
+      "category": "AI & ML",
+      "style": "技术蓝图风格",
+      "aliases": [
+        "together.ai"
+      ]
+    },
+    "uber": {
+      "category": "Enterprise",
+      "style": "黑白大胆、紧凑排版、都市能量",
+      "aliases": [
+        "uber"
+      ]
+    },
+    "vercel": {
+      "category": "Developer",
+      "style": "白底黑字极简、Geist 字体、shadow-as-border",
+      "aliases": [
+        "vercel"
+      ]
+    },
+    "voltagent": {
+      "category": "AI & ML",
+      "style": "深黑画布、翡翠点缀",
+      "aliases": [
+        "voltagent"
+      ]
+    },
+    "warp": {
+      "category": "Developer",
+      "style": "暗色 IDE、块式命令 UI",
+      "aliases": [
+        "warp"
+      ]
+    },
+    "webflow": {
+      "category": "Design",
+      "style": "蓝色精修、营销网站美学",
+      "aliases": [
+        "webflow"
+      ]
+    },
+    "wise": {
+      "category": "Fintech",
+      "style": "亮绿清新、友好清晰",
+      "aliases": [
+        "wise"
+      ]
+    },
+    "x.ai": {
+      "category": "AI & ML",
+      "style": "极简单色、未来主义",
+      "aliases": [
+        "xai",
+        "x.ai",
+        "grok"
+      ]
+    },
+    "zapier": {
+      "category": "Developer",
+      "style": "暖橙色、友好插图",
+      "aliases": [
+        "zapier"
+      ]
+    }
+  }
+}

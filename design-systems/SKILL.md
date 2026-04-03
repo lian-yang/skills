@@ -2,7 +2,7 @@
 name: design-systems
 description: >-
   Apply world-class design systems (Vercel, Stripe, Apple, Linear, etc.) to UI code generation.
-  54 curated DESIGN.md files extracted from real websites, covering color, typography, components,
+  50+ curated DESIGN.md files extracted from real websites, covering color, typography, components,
   shadows, spacing, and agent-ready prompt guides. Use when: user says "像 Vercel 风格", "Stripe 风格",
   "make it look like Apple/Linear/Notion", "apply design system", "use design-md", "design system",
   "设计系统", "配色方案", "设计风格". Triggers on brand names: vercel, stripe, apple, linear, notion,
@@ -21,7 +21,7 @@ This skill applies **brand-faithful design tokens** — not generic CSS. Every o
 
 - **Token 级精度** — Colors are hex-exact, typography matches the brand's actual font stack and weight system, shadows reproduce the brand's elevation model exactly.
 - **Do's and Don'ts 是护栏** — Each DESIGN.md 的 Do/Don't 部分是红线。违反 = 不像目标品牌。没有例外。
-- **交互式选择优先** — 54 个品牌不是一个静态列表。用浏览器交互预览让用户"看到"风格再决定，不是盲选。
+- **交互式选择优先** — 50+ 个品牌不是一个静态列表。用浏览器交互预览让用户"看到"风格再决定，不是盲选。
 - **混合时保持品牌灵魂** — Blend 多个设计系统时，每个系统的核心识别元素（字体、主色、阴影模式）至少保留一个。
 
 ---
@@ -33,7 +33,7 @@ This skill applies **brand-faithful design tokens** — not generic CSS. Every o
 | `reference/{brand}/DESIGN.md` | 9-section 完整设计规范 | Step 4: 读取目标品牌的全量设计 token |
 | `reference/{brand}/preview.html` | 亮色模式组件可视化目录 | Step 3: 用户想看完整组件库时打开 |
 | `reference/{brand}/preview-dark.html` | 暗色模式组件可视化目录 | Step 3: 暗色项目打开此文件 |
-| `assets/brand-preview-template.html` | 54 品牌交互式选择卡片 | Step 2: 品牌选择浏览器预览 |
+| `assets/brand-preview-template.html` | 50+ 品牌交互式选择卡片 | Step 2: 品牌选择浏览器预览 |
 | `assets/scripts/brand-catalog.py` | 从 DESIGN.md 提取品牌 JSON 目录 | Step 2: 生成品牌预览的数据源 |
 | `assets/scripts/run_brand_preview.py` | 启动品牌选择浏览器预览 | Step 2: 打开交互式预览 |
 
@@ -57,7 +57,7 @@ Wait for the answer before proceeding.
 
 ### Step 2: Brand Selection Preview
 
-Open the interactive 54-brand browser preview. This is the primary flow — not a fallback.
+Open the interactive 50+-brand browser preview. This is the primary flow — not a fallback.
 
 ```bash
 _SKILL_DIR=$(ls -d ~/.agents/skills/design-systems 2>/dev/null || ls -d ~/.claude/skills/design-systems 2>/dev/null)
@@ -78,7 +78,7 @@ else
 fi
 ```
 
-Tell the user: "我在浏览器里打开了 54 种品牌设计风格的预览卡片——从 Vercel 的极简黑白到 Spotify 的大胆暗色，从 Stripe 的金融科技到 SpaceX 的电影级纯黑。每张卡片都展示了真实的组件截图和配色方案。可以用顶部的类别筛选（AI & ML / Developer / Fintech 等），选好之后直接点卡片再点底部的「告诉 Agent →」按钮。如果不确定选什么，也可以告诉我你的项目类型，我帮你推荐。"
+Tell the user: "我在浏览器里打开了 50+ 种品牌设计风格的预览卡片——从 Vercel 的极简黑白到 Spotify 的大胆暗色，从 Stripe 的金融科技到 SpaceX 的电影级纯黑。每张卡片都展示了真实的组件截图和配色方案。可以用顶部的类别筛选（AI & ML / Developer / Fintech 等），选好之后直接点卡片再点底部的「告诉 Agent →」按钮。如果不确定选什么，也可以告诉我你的项目类型，我帮你推荐。"
 
 **2a — 用户选择后**
 
@@ -250,6 +250,34 @@ stripe
 5. **不混合互斥的设计 DNA。** 如果两个品牌的核心识别冲突（比如 Vercel 的极简白底 vs SpaceX 的纯黑电影级），blend 时只保留一个作为底色系统，另一个贡献点缀元素。
 6. **不使用 placeholder 文案。** 应用设计系统时生成的 UI 必须有真实内容——不是 Lorem ipsum，不是 "Your text here"。内容要匹配品牌的调性。
 7. **暗色/亮色模式必须完整。** 如果目标品牌有 dark mode 设计 token，应用时必须完整实现——不只是反转颜色，而是使用该品牌特定的暗色色板和对比度系统。
+
+---
+
+## Syncing from Upstream
+
+上游仓库 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 持续新增品牌。同步到本地：
+
+```bash
+_SKILL_DIR=$(ls -d ~/.claude/skills/design-systems 2>/dev/null || ls -d ~/.agents/skills/design-systems 2>/dev/null || echo ".")
+
+# 预览变更（不修改文件）
+python3 "$_SKILL_DIR/assets/scripts/sync_upstream.py" --dry-run
+
+# 执行同步
+python3 "$_SKILL_DIR/assets/scripts/sync_upstream.py"
+
+# 同时更新已有品牌的文件（上游有更新时）
+python3 "$_SKILL_DIR/assets/scripts/sync_upstream.py" --update-existing
+
+# 查看当前同步状态
+python3 "$_SKILL_DIR/assets/scripts/sync_upstream.py" --status
+```
+
+同步后：
+1. 新品牌的 4 个文件（DESIGN.md / README.md / preview.html / preview-dark.html）已复制到 `reference/`
+2. `brands-config.json` 已自动更新（分类、风格、别名）
+3. `brand-catalog.py` 下次运行自动读取新数据，无需改代码
+4. 需手动更新本文件的 Design System Categories 列表和 Brand Name Alias Map
 
 ---
 
